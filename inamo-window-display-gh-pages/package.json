@@ -1,0 +1,18 @@
+{
+  "name": "inamo-window-display",
+  "version": "1.0.0",
+  "description": "For the window projections",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel watch:ts watch:serve",
+    "watch:ts": "tsc -p . --watch",
+    "watch:serve": "live-server ."
+  },
+  "author": "Bernie Sumption <bernie@berniecode.com> (http://berniesumption.com/)",
+  "dependencies": {
+    "live-server": "^1.1.0",
+    "npm-run-all": "^3.0.0",
+    "tslint": "^3.14.0",
+    "typescript": "^1.8.10"
+  }
+}

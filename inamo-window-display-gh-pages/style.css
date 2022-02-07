@@ -1,0 +1,73 @@
+@font-face {
+    font-family: inamofont;
+    src: url(assets/CenturyGothic.ttf);
+}
+
+
+body, html {
+  background: #000;
+  color: #FFF;
+  font-family: inamofont, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+.screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10vh;
+  visibility: hidden;
+  opacity: 0;
+  display: table;
+  background-blend-mode: hard-light;
+  background-size: cover;
+}
+
+.large .screen {
+  padding: 2.5vh;
+}
+
+.screen.animated {
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+.screen.current {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.bigmessage {
+  box-sizing: border-box;
+  font-size: 15vh;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+}
+
+.logo:before {
+  content: "";
+  position: absolute;
+  top: 10vh;
+  left: 10vh;
+  right: 10vh;
+  bottom: 10vh;
+  background: url(assets/logo.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+}
